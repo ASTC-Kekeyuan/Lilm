@@ -1,35 +1,8 @@
-import get
-import code
-import data
+import config
+import flask
+from flask_sqlalchemy import SQLAlchemy
+app = flask.Flask("Lilm")
+app.config["SQLALCHEMY_DATABASE_URI"] = config.SQL_URL
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-def add(isbn):
-    c = get.get(isbn)
-    data.add(code.decode(c))
-
-def query_all():
-    data.query_all()
-
-def query_isbn(isbn):
-    print(data.query_detail(isbn = isbn))
-    print(data.query_rating(isbn = isbn))
-
-act = input()
-if act == 'add':
-    while True:
-        isbn = input()
-        if isbn == 'x':
-            break
-        add(isbn)
-        print('done')
-if act == 'qa':
-    res = data.query_all()
-    for i in res :
-        print(i.isbn,i.name)
-        print('------')
-if act == 'qs':
-    while True:
-        isbn = input()
-        if isbn == 'x':
-            break
-        query_isbn(isbn)
-        print('------')
+db = SQLAlchemy(app)

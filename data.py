@@ -61,7 +61,6 @@ def add(source):
                         author_intro=source.book_intro, catalog=source.catalog, labels=','.join(source.labels), url=source.url))
     session.add(Rating(isbn=source.isbn, count=source.rating['count'], info=source.rating['rating_info'],
                        star_count=source.rating['star_count'], value=source.rating['value']))
-    session.add
     session.commit()
     session.close()
 
@@ -81,4 +80,4 @@ def query_rating(isbn):
     session = DBSession()
     res = session.query(Rating).filter(Rating.isbn==isbn).one()
     session.close()
-    return res;
+    return res
