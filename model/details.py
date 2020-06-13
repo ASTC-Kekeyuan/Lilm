@@ -6,7 +6,6 @@ class Details(db.Model):
 
     isbn = db.Column(db.String(13), primary_key=True)
     abstract = db.Column(db.Text)
-    name = db.Column(db.String(128))
     book_intro = db.Column(db.Text)
     author_intro = db.Column(db.Text)
     catalog = db.Column(db.Text)
