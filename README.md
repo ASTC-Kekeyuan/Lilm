@@ -1,9 +1,9 @@
 # Lilm
 
-Lilm(Lilm Is a Library Manager)是我和csc合作的图书馆管理软件
+Lilm(Lilm Is a Library Manager)是一个图书馆管理软件。
 
-使用Python作为后端，MySQL作为数据库，Flask提供API
+Lilm使用Python开发后端，MySQL为数据库，并由Flask提供API。
 
-目前并没有前端计划
+不过，目前并没有前端的开发计划。
 
-开发日记:[链接](https://lwzhenglittle.github.io/post/lilm-kai-fa-ri-ji/)，记录了本软件的开发过程
+开发日记:[链接](https://lwzhenglittle.github.io/post/lilm-kai-fa-ri-ji/)，将记录本软件的开发过程。
